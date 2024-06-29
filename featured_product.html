@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Product</title>
+    <link rel="stylesheet" href="CSS/style1.css">
+    <style>
+        .slider-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+        }
+        .caption {
+            text-align: center;
+            font-size: 1.2em;
+            padding: 10px 0;
+        }
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .nav-button.left {
+            left: 10px;
+        }
+        .nav-button.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="food_menu.html">Food Menu</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="add_product.html">Add Product</a>
+        <a class="nav-link" href="featured_product.html">Featured Product</a>
+        <a class="nav-link" href="Food menu description.html">Food Details</a>
+        <a class="nav-link" href="order.html">Make an Order</a>
+    </nav>
+    <div align="center">
+    <div class="container">
+        <h2>Featured Products</h2> 
+        <div class="slider-container">
+            <button class="nav-button left">&#10094;</button>
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/Shorshe Ilish.jpg" alt="Shorshe Ilish">
+                    <div class="caption">Shorshe Ilish</div>
+                </div>
+                <div class="slide">
+                    <img src="images/badam_juice.jpg" alt="badam_juice">
+                    <div class="caption">Badam Juice</div>
+                </div>
+                <div class="slide">
+                    <img src="images/doi.jpg" alt="doi">
+                    <div class="caption">Doi</div>
+                </div>
+            </div>
+            <button class="nav-button right">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="Js/script1.js"></script>
+</body>
+</html>

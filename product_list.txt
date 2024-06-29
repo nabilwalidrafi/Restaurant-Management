@@ -1,0 +1,19 @@
+CREATE TABLE `product_list` (
+  `id` int(30) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `price` float NOT NULL DEFAULT 0,
+  `img_path` text NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0= unavailable, 1=Available'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+INSERT INTO `product_list` (`id`, `name`, `description`, `price`, `img_path`, `status`) VALUES
+(1, 'আমের জুস', '২৫০ মিলি', 20, '1600652160_mango_juice.jpg', 4),
+(2, 'খাসির রেজালা', '৫০০ গ্রাম', 450, '1600652520_khashir_rejala.jpg', 4),
+(3, 'গরুর কালা ভুনা', '৫০০ গ্রাম', 350, '1600652880_gorur_kala_vuna.jpg', 4),
+(4, 'সবজি খিচুড়ি', '১ বাটি বড়', 80, '1600652880_Shobji_khichuri.jpg', 10),
+(5, 'কাচ্চি বিরিয়ানি', 'ফুল প্লেট', 250, '1600656600_kacchi.jpg', 10),
+(6, 'দেশী মুরগির তরকারি', '১ কেজি', 130, '1600652880_chicken_deshi.jpg', 1),
+(7, ' মুরগির রোস্ট', 'আস্ত বয়লার মুরগি ১কেজি +-', 160, '1600652160_roast_murgi.jpg', 10);

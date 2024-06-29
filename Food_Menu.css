@@ -1,0 +1,50 @@
+*{
+    background-color: aquamarine;
+}
+h3{
+    text-align: center;
+}
+.container{
+    text-align: center;
+}
+.disp{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+.menu-item {
+    display: inline-block;
+    width: 200px;
+    margin: auto;
+    vertical-align: top;
+    border: 1px solid black;
+}
+.menu-item .card-category {
+    font-size: 2px;
+    text-align: center;
+    color: blue;
+}
+.menu-item .card-title {
+    font-size: 18px;
+    text-align: center
+}
+.menu-item .card-text {
+    font-size: 14px;
+    text-align: center
+}
+.menu-item .card-price {
+    font-size: 14px;
+    text-align: center
+}
+.menu-item .card-img-top {
+    max-width: 100%;
+    border-bottom: 1px solid black;
+}
+.menu-item .btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Order</title>
+    <link rel="stylesheet" href="CSS/style1.css">
+    
+</head>
+<body>
+    <nav class="sidebar">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="food_menu.html">Food Menu</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="add_product.html">Add Product</a>
+        <a class="nav-link" href="featured_product.html">Featured Product</a>
+        <a class="nav-link" href="Food menu description.html">Food Details</a>
+        <a class="nav-link" href="order.html">Make an Order</a>
+    </nav>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aqua;
+            color: black;
+            background-image: url(images/delivery.png);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .frame {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+        h1 {
+            font-family: cursive;
+            font-weight: bold;
+            color: blue;
+            text-shadow: 2px 2px aqua;
+        }
+        input[type="text"], input[type="tel"], input[type="number"] {
+            width: 70%; /* Reduced width */
+            margin-bottom: 20px;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto; /* Center the input boxes */
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Get form values
+            var name = document.getElementById('customer_name').value;
+            var foodName = document.getElementById('food_name').value;
+            var phoneNumber = document.getElementById('phone_number').value;
+            var quantity = document.getElementById('quantity').value;
+
+            // Regular expression patterns
+            var namePattern = /^[a-zA-Z\s]+$/;
+            var foodNamePattern = /^[a-zA-Z\s]+$/;
+            var phonePattern = /^[0-9]{11}$/;
+
+            // Validation checks
+            if (!name || !foodName || !phoneNumber || !quantity) {
+                alert('All fields are required.');
+                return false;
+            }
+
+            if (!namePattern.test(name)) {
+                alert('Please enter a valid name (letters and spaces only).');
+                return false;
+            }
+
+            if (!foodNamePattern.test(foodName)) {
+                alert('Please enter a valid food name (letters and spaces only).');
+                return false;
+            }
+
+            if (!phonePattern.test(phoneNumber)) {
+                alert('Please enter a valid 11-digit phone number.');
+                return false;
+            }
+
+            // Check if quantity is a positive number
+            if (quantity <= 0) {
+                alert('Please enter a valid quantity.');
+                return false;
+            }
+
+            // If all checks pass, display thank you message
+            alert('Thank you for your order, ' + name + '!');
+            document.getElementById('orderForm').submit();
+        }
+    </script>
+</head>
+<body>
+    <div class="frame">
+        <h1>Online Food Order</h1>
+        <form id="orderForm" method="post" action="PHP/food_order.php" onsubmit="validateForm(event)">
+            <label for="customer_name">Name:</label><br>
+            <input type="text" id="customer_name" placeholder="Enter your name" name="customer_name" required><br>
+            <label for="food_name">Food Name:</label><br>
+            <input type="text" id="food_name" placeholder="Enter your desired Food name" name="food_name" required><br>
+            <label for="phone_number">Phone Number:</label> <br>
+            <input type="tel" id="phone_number" placeholder="Enter your phone number" name="phone_number" required><br>
+    
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" name="quantity" required>
+            <br>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>

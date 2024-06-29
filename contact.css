@@ -1,0 +1,62 @@
+body {
+    align-items: center;
+}
+h2 {
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+    color: blue;
+    text-shadow: 4px 4px aqua;
+}
+form {
+    width: 500px;
+    padding: 70px;
+    background-color: lightgray;
+    margin: auto;
+    margin-top: 100px;
+    font-family: Impact;
+}
+input[type="text"], input[type="number"], input[type="email"], textarea {
+    width: 100%; /* Make the input boxes take up full width of the form */
+    padding: 20px; /* Increase padding for more height */
+    font-size: 16px; /* Increase font size */
+    margin-bottom: 10px; /* Add margin between input fields */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    border-radius: 4px; /* Add border radius for smoother corners */
+    text-align: left; /* Align text to the left for better readability */
+}
+textarea {
+    height: 150px; /* Set a fixed height for the textarea */
+}
+#error {
+    color: red;
+    background-color: yellow;
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    border: 2px solid white;
+}
+#button {
+    width: 100px; /* Increase width of the button */
+    border: 1px solid blue;
+    border-radius: 32px 32px;
+    font-family: cursive;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+#button:hover {
+    background-color: lawngreen;
+    color: red;
+}
+.error {
+    color: red;
+    background-color: yellow;
+}

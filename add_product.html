@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="CSS/style1.css">
+    <link rel="stylesheet" href="CSS/style2.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="food_menu.html">Food Menu</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="add_product.html">Add Product</a>
+        <a class="nav-link" href="featured_product.html">Featured Product</a>
+        <a class="nav-link" href="Food menu description.html">Food Details</a>
+        <a class="nav-link" href="order.html">Make an Order</a>
+    </nav>
+    <div class="container">
+        <h2>Add Product</h2>
+        <form method="post" action="PHP/insert_product.php">
+            <label for="product_name">Product Name:</label><br>
+            <input type="text" id="productName" name="product_name" required><br>
+            <label for="category">Category:</label><br>
+            <input type="text" id="category" name="category" required><br>
+            <label for="manufacturing_date">Manufacturing Date:</label><br>
+            <input type="date" id="productDate" name="manufacturing_date" required><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>
